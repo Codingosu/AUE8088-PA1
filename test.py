@@ -1,6 +1,7 @@
 """
     [AUE8088] PA1: Image Classification
         - To run: (aue8088) $ python test.py --ckpt_file wandb/aue8088-pa1/ygeiua2t/checkpoints/epoch\=19-step\=62500.ckpt
+python test.py --ckpt_file wandb/aue8088-pa1/파일명/checkpoints/epoch=숫자-step=숫자.ckpt
 """
 # Python packages
 import argparse
@@ -51,3 +52,7 @@ if __name__ == "__main__":
 
     with flop_counter:
         model(x)
+
+    # F1Score
+    # model.F1Score.show()
+    # print(model.F1Score.compute().tolist())
